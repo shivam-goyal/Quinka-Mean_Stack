@@ -32,12 +32,12 @@ myApp.controller('AppCtrl',['$scope','$http',function($scope,$http){
 myApp.controller('ContactApp',['$scope','$http',function($scope,$http){
 	console.log("Hello controller11");
 //	$http.get('/contacts');
-//	 var refresh =function(){
+	 var refresh =function(){
 		$http.get('/contacts').success(function(response1){
 			console.log("I got the data I reqested for ContactApp");
 			$scope.contacts = response1;
-		});
-/*			$scope.information ="";
+		//});
+		$scope.information ="";
 		});
 	};
 	refresh();
@@ -49,5 +49,5 @@ myApp.controller('ContactApp',['$scope','$http',function($scope,$http){
 			refresh();
 		});
 	};
-*/
+
 }]);

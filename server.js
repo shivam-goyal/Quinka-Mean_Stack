@@ -40,13 +40,13 @@ app.post('/contactlist', function (req,res){
 		res.json(doc);
 	});
 });
-/*app.post('/contacts', function (req,res){
+app.post('/contacts', function (req,res){
 	console.log(req.body);
 	db2.contacts.insert(req.body, function(err,doc){
 		res.json(doc);
 	});
 });
-*/app.delete('/contactlist/:id',function (req,res){
+app.delete('/contactlist/:id',function (req,res){
 	var id = req.params.id;
 	console.log(id);
 	db1.contactlist.remove({_id: mongojs.ObjectId(id)},function (err,doc){
