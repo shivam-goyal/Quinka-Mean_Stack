@@ -1,0 +1,160 @@
+<!doctype html>
+<html ng-app>
+<head>
+  <meta charset ="utf-8">
+  <meta name="viewport" content ="width=device-width, initial-scale=1.0">
+  <title>Getting Started</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+</head>
+<body> 
+  <nav class="navbar navbar-default navbar-static-top no-margin" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-Quinka-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button> 
+        <a class="navbar-brand" href="#">Quinka</a>
+      </div>
+      <div class="collapse navbar-collapse navbar-right" id="bs-Quinka-navbar-collapse-1">
+       <ul class="nav navbar-nav nav-tabs">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Qnka Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Link1</a></li>
+            <li><a href="#">Link2</a></li>
+            <li><a href="#">Link3</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class ="container">
+    <img src ="images/logo.jpg" class="pull-right" height="100px" width="100px">
+    <h4 class ="no-margin">We take your fun seriously !</h4>
+    <h5>Quinka brings people together through live experiences. Discover events that match your passions, or create your own with online ticketing tools.Invite people to your event, and reach a new audience.Check guest lists, scan tickets, and throw a great event without a hitch and win exclusive prizes</h5>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+
+  </div>
+</div>
+<div class="container">
+
+  <div class="col-sm-4 col-md-4">
+    <h3>Title 1</h3>
+    <p>Preparing for a Fancy Dress Ball is an oil painting by English artist William Etty. Although he was then known almost exclusively for history paintings featuring nude figures, he was commissioned in 1833 by Welsh Conservative politician Charles Williams-Wynn to paint a portrait of two of his daughters. Charlotte, the eldest, is shown standing, helping the seated Mary decorate her hair with a ribbon and a rose, both in lavish Italian-style costume.  </p>
+  </div>
+  <div class="col-sm-4 col-md-4">
+    <h3>Title 2</h3>
+    <p>Preparing for a Fancy Dress Ball is an oil painting by English artist William Etty. Although he was then known almost exclusively for history paintings featuring nude figures, he was commissioned in 1833 by Welsh Conservative politician Charles Williams-Wynn to paint a portrait of two of his daughters. Charlotte, the eldest, is shown standing, helping the seated Mary decorate her hair with a ribbon and a rose, both in lavish Italian-style costume. Etty put a good deal of effort into the piece and took much </p>
+  </div>
+  <div class="col-sm-4 col-md-4 ">
+    <h3>Title 3</h3>
+    <p>Preparing for a Fancy Dress Ball is an oil painting by English artist William Etty. Although he was then known almost exclusively for history paintings featuring nude figures, he was commissioned in 1833 by Welsh Conservative politician Charles Williams-Wynn  </p>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col-md-offset-1">
+     <div class ="panel panel-default">
+      <div class="panel-body">
+        <img src="images/index.jpg" class="img-responsive" >
+        <h4>Head 1</h4>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>PHP</li>
+          <li>JS</li>
+        </ul>
+        <a href="#" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 col-md-offset-1">
+   <div class ="panel panel-default">
+    <div class="panel-body">
+      <img src="images/index.jpg" class="img-responsive">
+      <h4>Head 2</h4>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>PHP</li>
+        <li>JS</li>
+      </ul>
+      <a href="#" class="btn btn-default ">Read More</a>
+    </div>
+  </div>
+</div>
+<div class="col-md-3 col-md-offset-1">
+ <div class ="panel panel-default">
+  <div class="panel-body">
+   <div class="container" ng-init="person=[{name: 'Dave',city:'bte'},{name:'sac',city:'rr'}]">
+    Name:
+    <br/>
+    <input type="text" ng-model="name"/>{{name}}
+    <br/>
+    <ul>
+      <li ng-repeat ="pers in person">{{pers.name}} - {{pers.city}}
+      </ul>
+      <script type="text/javascript" src="js/angular.min.js"></script>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!--Start of the footer -->
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+
+        <h4>Contact Address</h4>
+        <address class="color-address">
+          D-148 Ranjeet Nagar ,<br>
+          Bharatpur,Rajasthan,<br>
+          INDIA.
+        </address>
+      </div>
+
+
+    </div>
+    <div class="bottom-footer">
+      <div class="col-md-5">© Copyrights Qunika 2015.</div>
+      <div class="col-md-7">
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Link</a></li>
+        </ul>
+      </div>
+
+      <div>
+      </footer>
+
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    </body>
+
+
+    </html>

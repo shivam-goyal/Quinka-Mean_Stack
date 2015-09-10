@@ -1,0 +1,142 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <meta charset ="utf-8">
+  <meta name="viewport" content ="width=device-width, initial-scale=1.0">
+  <title>Contact us</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body> 
+  <nav class="navbar navbar-default navbar-static-top " role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-Quinka-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button> 
+        <a class="navbar-brand" href="#">Quinka</a>
+      </div>
+      <div class="collapse navbar-collapse navbar-right" id="bs-Quinka-navbar-collapse-1">
+       <ul class="nav navbar-nav nav-tabs">
+        <li ><a href="index.html">Home</a></li>
+        <li><a href="index.html">Products</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="active"><a href="contact.html">Contact</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Qnka Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Link1</a></li>
+            <li><a href="#">Link2</a></li>
+            <li><a href="#">Link3</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container" ng-controller="ContactApp">
+  <div class="row">
+    <div class="col-md-5">
+      <div class ="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">Contact Address</h4>
+        </div>
+        <div class="panel-body">
+
+          <address>
+            <b>Quinka</b> D-148 Ranjeet Nagar ,<br>
+            Bharatpur,Rajasthan,<br>
+            INDIA.
+          </address>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-7">
+      <div class ="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">Contact Form</h4>
+        </div>
+        <div class="panel-body">
+          <form class="form-horizontal">
+            <div class="form-group">
+
+              <label for="contactname" class="col-sm-2 control-label">Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="contactname" placeholder="Name" ng-model="information.name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactemail" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="contactemail" placeholder="Email" ng-model="information.email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactsubject" class="col-sm-2 control-label">Subject</label>
+              <div class="col-sm-10">
+                <input type="text" id="contactsubject" class="form-control" placeholder="Subject" ng-model="information.subject">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactmessage" class="col-sm-2 control-label">Message</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" id="contactmessage" rows="6" ng-model="information.message"></textarea> 
+              </div>
+            </div>
+            <div class="col-sm-10 col-sm-offset-2">
+            <button type="submit" class="btn btn-default" ng-click="addDetails()">Submit</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- start of footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+
+        <h4>Contact Address</h4>
+        <address class="color-address">
+          D-148 Ranjeet Nagar ,<br>
+          Bharatpur,Rajasthan,<br>
+          INDIA.
+        </address>
+      </div>
+
+
+    </div>
+    <div class="bottom-footer">
+      <div class="col-md-5">© Copyrights Qunika 2015.</div>
+      <div class="col-md-7">
+        <ul class="footer-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Link</a></li>
+        </ul>
+      </div>
+
+      <div>
+      </footer>
+
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/angular.min.js"></script>
+      <script  src="controllers/controller.js"></script>
+
+    </body>
+
+
+    </html>

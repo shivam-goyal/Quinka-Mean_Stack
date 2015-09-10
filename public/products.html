@@ -1,0 +1,106 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+	<meta charset ="utf-8"
+	<meta name="viewport" content ="width=device-width, initial-scale=1.0">
+	<title>Getting Started</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!--<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/> <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> 
+	 <script> $(document).ready(function() { $("#datepicker").datepicker(); });
+	 </script> -->
+
+
+	</head>
+	<body> 
+		<nav class="navbar navbar-default navbar-static-top no-margin" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-Quinka-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button> 
+					<a class="navbar-brand" href="#">Quinka</a>
+				</div>
+				<div class="collapse navbar-collapse navbar-right" id="bs-Quinka-navbar-collapse-1">
+					<ul class="nav navbar-nav nav-tabs">
+						<li><a href="index.html">Home</a></li>
+						<li  class="active"><a href="products.html">Products</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Qnka Dropdown <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Link1</a></li>
+								<li><a href="#">Link2</a></li>
+								<li><a href="#">Link3</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">One more separated link</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container" ng-controller="AppCtrl">
+			<!--<h1>Handloom Data</h1>-->
+			<div class="container">
+				<div class="row">
+					<div class = "col-md-8 col-md-offset-1">
+						<div class = "panel panel-default">
+							<div class= "panel-heading">
+								<h4 class="panel-title">Handloom Data</h4>
+							</div>
+
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Number</th>
+										<th>Type</th>
+										<th>Date</th>
+										<th>Amount</th>
+
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr><td><input class="form-control" ng-model="contact.name"></td>
+										<td><input class="form-control" ng-model="contact.number"></td>
+										<td><div class="form-group" for="sel1" >
+											<select class="form-control" ng-model="contact.type" id="sel1">
+												<option>Plywol 2kg</option>
+												<option>Plywol 2.5Kg</option>
+												<option>Bedcover Single</option>
+												<option>Bedcover Double</option>
+											</select>
+										</div></td>
+										<td><input type="date" class="form-control" ng-model="contact.date" id="datepicker"></td>
+										<td><input class="form-control" ng-model="contact.amount"></td>
+										<td><button class="btn btn-primary" ng-click="addContact()">Add Customer</button></td>
+									</tr>
+									<tr ng-repeat = "contact in contactlist | orderBy:'date' ">
+										<td>{{contact.name}}</td>
+										<td>{{contact.number}}</td>
+										<td>{{contact.type}}</td>
+										<td>{{contact.date | date : 'mediumDate'}}</td>
+										<td>{{contact.amount}}</td>
+										<td><button class="btn btn-danger" ng-click="remove(contact._id)">Remove</td>
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script type="text/javascript" src="js/angular.min.js"></script>
+			<script  src="controllers/controller.js"></script>
+
+		</body>
+		</html> 
